@@ -1,0 +1,8 @@
+{
+  "name": "Vihaansh Sleep",
+  "short_name": "Vihaansh Sleep",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f7ff",
+  "theme_color": "#596be0"
+}
