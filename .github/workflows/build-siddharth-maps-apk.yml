@@ -22,15 +22,15 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.11.1'
-      - name: Build release APK
+      - name: Build installable debug APK
         working-directory: android-map
-        run: gradle assembleRelease --no-daemon
+        run: gradle assembleDebug --no-daemon
       - name: Prepare APK
-        run: cp android-map/app/build/outputs/apk/release/app-release-unsigned.apk SiddharthMaps.apk
+        run: cp android-map/app/build/outputs/apk/debug/app-debug.apk SiddharthMaps.apk
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: siddharth-maps-v1.0.0
-          name: Siddharth Maps v1.0.0
-          body: Android APK build of Siddharth Maps.
+          tag_name: siddharth-maps-v1.0.1
+          name: Siddharth Maps v1.0.1
+          body: Installable Android debug APK build of Siddharth Maps.
           files: SiddharthMaps.apk
