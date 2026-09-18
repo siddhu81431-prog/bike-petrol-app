@@ -16,9 +16,6 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - uses: android-actions/setup-android@v3
-      - name: Install Android SDK
-        run: sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.11.1'
@@ -30,7 +27,7 @@ jobs:
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: siddharth-maps-v1.0.1
-          name: Siddharth Maps v1.0.1
+          tag_name: siddharth-maps-v1.0.2
+          name: Siddharth Maps v1.0.2
           body: Installable Android debug APK build of Siddharth Maps.
           files: SiddharthMaps.apk
